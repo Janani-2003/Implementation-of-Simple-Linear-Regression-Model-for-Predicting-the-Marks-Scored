@@ -56,6 +56,7 @@ plt.show()898
 ![Screenshot 2022-12-01 204519](https://user-images.githubusercontent.com/94288340/205089949-bd04a6c9-8cef-4767-80dd-b8c6e819adf2.png)
 ![Screenshot 2022-12-01 204551](https://user-images.githubusercontent.com/94288340/205090005-a64e1e5c-85ab-4bdc-8cb6-cb19333f51b0.png)
 ![Screenshot 2022-12-01 204622](https://user-images.githubusercontent.com/94288340/205090045-a0d41554-e605-4416-8c34-f9a1d102c06f.png)
+![Screenshot 2022-12-01 205454](https://user-images.githubusercontent.com/94288340/205091950-ebf45f6b-27b3-4c49-93d9-8f33b439d6bb.png)
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
