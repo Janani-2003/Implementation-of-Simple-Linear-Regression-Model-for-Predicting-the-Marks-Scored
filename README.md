@@ -22,42 +22,40 @@ RegisterNumber: 212221230039
 
 import numpy as np
 import pandas as pd
-dataset=pd.read_csv('/content/student_scores.csv')
-X=dataset.iloc[:,:-1].values
-Y=dataset.iloc[:,-1].values
-print(X)
-print(Y)
-from sklearn.linear_model import LinearRegression
-reg=LinearRegression()
-reg.fit(X_train,Y_train)
-Y_pred=reg.predict(X_test)
 import matplotlib.pyplot as plt
-from sklearn.metrics import mean_absolute_error,mean_squared_error
-
-plt.scatter(X_train,Y_train,color='green')
-plt.plot(X_train,reg.predict(X_train),color='orange')
-plt.title('Training set (H vs S)')
-plt.xlabel('Hours')
-plt.ylabel("scores")
-plt.scatter(X_test,Y_test,color='red')
-plt.plot(X_test,reg.predict(X_test),color='black')
-plt.title('Test set (H vs S)')
-plt.xlabel('Hours')
-plt.ylabel("scores")
-mse=mean_squared_error(Y_test,Y_pred)
-print("MSE = ",mse)
-
-mae=mean_absolute_error(Y_test,Y_pred)
-print("MAE =  ",mae)
-
-rmse=np.sqrt(mse)
-print("RMSE = ",rmse)
+df=pd.read_csv("/content/student_scores - student_scores.csv")
+df.head()
+x=df.iloc[:,:-1].values
+x
+y=df.iloc[:,1].values
+y
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3,random_state=0)
+from sklearn.linear_model import LinearRegression
+regressor=LinearRegression()
+regressor.fit(x_train,y_train)
+y_pred=regressor.predict(x_test)
+y_pred
+y_test
+plt.scatter(x_train,y_train,color="red")
+plt.plot(x_train,regressor.predict(x_train),color="blue")
+plt.title("Hours vs scores(Training set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
+plt.show()
+plt.scatter(x_test,y_test,color="red")
+plt.plot(x_train,regressor.predict(x_train),color="blue")
+plt.title("Hours vs scores(Training set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
+plt.show()898
 */
 ```
 
 ## Output:
-![image](https://user-images.githubusercontent.com/94288340/200872079-aa5c9e07-1a65-44a4-b277-be8016c95a19.png)
-![204134401-38573624-fbea-4e90-9b38-b863161b1619](https://user-images.githubusercontent.com/94288340/204719949-675bb837-856d-42fc-9ce4-b6b3767fe655.png)
+![Screenshot 2022-12-01 204519](https://user-images.githubusercontent.com/94288340/205089949-bd04a6c9-8cef-4767-80dd-b8c6e819adf2.png)
+![Screenshot 2022-12-01 204551](https://user-images.githubusercontent.com/94288340/205090005-a64e1e5c-85ab-4bdc-8cb6-cb19333f51b0.png)
+![Screenshot 2022-12-01 204622](https://user-images.githubusercontent.com/94288340/205090045-a0d41554-e605-4416-8c34-f9a1d102c06f.png)
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
